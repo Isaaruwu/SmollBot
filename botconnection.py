@@ -1,9 +1,12 @@
 import discord
+import schedule
 from discord.ext import commands
 from utils.getcommands import get_extensions
 
 import os
 import configparser
+
+from datetime import datetime
 
 bot_name = 'SmollBot'
 
@@ -28,24 +31,10 @@ def create_bot(filename):
     return bot, token
 
 
-# # Welcome auto-message
-# replies_and_text = json.load(open('../Commands/Help/greetingsandquotes.json', "r", encoding="UTF-8"))
-#
-#
-# @tasks.loop(hours=2)
-# async def auto_send():
-#     channel = await client.fetch_channel(923006044643418165)
-#     await channel.send(replies_and_text['Welcome'])
-
 if __name__ == '__main__':
-    print(os.getcwd())
-
-    smollbot = create_bot('info.ini')[0]
-    smollbot.run(create_bot('info.ini')[1])
-
-    # @client.event
-    # async def on_ready():
-    #     auto_send.start()
+    schedule.run_all()
+    smollbot, token = create_bot('info.ini')
+    smollbot.run(token)
 
 
 
