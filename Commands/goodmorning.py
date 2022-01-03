@@ -29,9 +29,9 @@ class MorningMessage(commands.Cog):
         now = datetime.now().strftime('%H:%M')
         data = json.loads(requests.get(URL).content)
 
-        channel = await self.bot.fetch_channel(923006044643418165)
+        channel = await self.bot.fetch_channel(927546991163084871)
 
-        if now[:2] == '23' and now[3:] == '39':
+        if now[:2] == '09' and now[3:] == '00':
             embed = discord.Embed(colour=0x00FFFF,
                                   title="Today's Weather ⛅",
                                   description=f"Montreal"

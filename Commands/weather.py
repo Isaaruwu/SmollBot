@@ -21,8 +21,6 @@ class Weather(commands.Cog):
         url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric'
         data = json.loads(requests.get(url).content)
 
-        channel = await self.bot.fetch_channel(923006044643418165)
-
         embed = discord.Embed(colour=0x00FFFF,
                               title="Today's Weather ⛅",
                               description=f"{city[0].upper() + city[1:]}"
@@ -39,7 +37,7 @@ class Weather(commands.Cog):
         embed.add_field(name='🌿🌿🌿', value=text, inline=True)
         embed.set_footer(text=f"SmolleBot - Weather")
 
-        await channel.send(embed=embed)
+        await ctx.send(embed=embed)
 
 
 def setup(bot: commands.Bot):

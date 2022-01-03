@@ -1,12 +1,9 @@
 import discord
-import schedule
 from discord.ext import commands
 from utils.getcommands import get_extensions
 
-import os
 import configparser
 
-from datetime import datetime
 
 bot_name = 'SmollBot'
 
@@ -32,7 +29,6 @@ def create_bot(filename):
 
 
 if __name__ == '__main__':
-    schedule.run_all()
     smollbot, token = create_bot('info.ini')
     smollbot.run(token)
 

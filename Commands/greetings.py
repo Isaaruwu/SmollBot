@@ -18,5 +18,6 @@ class Greetings(commands.Cog):
         await ctx.send(random.choice(list(file[1].values())))
 
 
+
 def setup(bot: commands.Bot):
     bot.add_cog(Greetings(bot))
