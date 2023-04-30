@@ -23,5 +23,7 @@ The bot currently supports the following commands:
 
 ## Credits
 [Discord API](https://discord.com/developers/docs/intro)
+
 [OpenWeatherMap API](https://openweathermap.org/)
+
 [PRAW: The Python Reddit API Wrapper](https://praw.readthedocs.io/en/stable/)
