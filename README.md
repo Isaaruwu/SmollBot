@@ -1,4 +1,4 @@
-# Discord Bot: SmollBot
+# SmollBot
 This is a Python-based Discord bot that uses the Discord API to provide users with current weather information, generate random memes and replies. The bot utilizes OpenWeatherMap API to retrieve current weather information and PRAW (The Python Reddit API Wrapper) to scrape memes from r/memes. The bot sends a message to the discord server every day at 9am to inform on the current weather. 
 
 ## Requirements
